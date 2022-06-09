@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Paint</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__color">
+        <span class="header__text">Цвет кисти</span>
+        <input class="color" id="color" type="color" />
+      </div>
+      <div class="header__size">
+        <span class="header__text">Размер кисти</span>
+        <input id="size" type="range" min="1" max="50" step="1" value="1" />
+      </div>
+      <div class="header__fill-button">
+        <input class="color" id="fill_color" type="color" />
+        <button id="filling">Заливка</button>
+      </div>
+      <button class="header__button" onclick="clearAll()">
+        <img class="header__icon" src="svg/clear-icon.svg" alt="clear" />
+        Очистить
+      </button>
+      <button class="header__button" onclick="download()">
+        <img
+          class="header__icon"
+          src="svg/download-icon.svg"
+          alt="download"
+        />Скачать
+      </button>
+      <a id="link"></a>
+    </header>
+    <canvas id="canvas" width="1000" height="700"></canvas>
+    <image id="theimage"></image>
+  </body>
+</html>
